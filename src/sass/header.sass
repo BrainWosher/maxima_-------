@@ -1,9 +1,17 @@
 body 
     color: #fff
-@mixin flex-center 
+@mixin flex-center-between 
     display: flex
     align-items: center
     justify-content: space-between
+@mixin flex-center
+    display: flex
+    align-items: center
+@mixin flex-center-column 
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    flex-direction: column
 .wrapper 
     box-sizing: border-box
     width: 978px
@@ -11,14 +19,14 @@ body
 .header 
     background-color: #00a0e3
     background-image: linear-gradient(to right, #e23760 0%, #f85980 100%)
-    &-top 
-        @include flex-center
-        &-item 
+    &__top 
+        @include flex-center-between
+        &_item 
             box-sizing: border-box
             &:hover 
                 cursor: pointer
     &-schedule 
-        @include flex-center
+        @include flex-center-between
         font-family: "Intro Regular"
         font-size: 12px
         line-height: 20px
@@ -41,6 +49,18 @@ body
             top: 34px
             margin-left: -23.5px
             margin-top: -24.5px
+        &::after 
+            position: absolute
+            content: ''
+            background-image: url(../../img/header/mark.png)
+            background-position: center
+            background-repeat: no-repeat
+            width: 16px
+            height: 16px
+            left: 45px
+            top: 14px
+            margin-left: -8px
+            margin-top: -8px
 
     &-phone 
         color: #ffa3b9
@@ -52,7 +72,7 @@ body
             font-size: 20px
             line-height: 20px
     &-call 
-        @include flex-center
+        @include flex-center-between
         font-family: "Intro Regular"
         font-size: 12px
         line-height: 20px
@@ -75,3 +95,74 @@ body
             top: 26px
             margin-left: -16px
             margin-top: -16px
+.main 
+    @include flex-center
+    margin-top: 37px    
+    &__logo 
+        width: 199px
+        height: 106px
+        background-image: url(../../img/header/main-logo.png)
+        background-position: center
+        background-repeat: no-repeat
+        margin-right: 106px
+.nav 
+    @include flex-center-between
+    margin: 0
+    padding: 0
+    &-item 
+        list-style: none
+        position: relative   
+        &:hover .nav-icon
+            top: -20px
+            background: #e23861    
+        &:first-child 
+            margin-right: 63px  
+        &:nth-child(2) 
+            margin-right: 51px
+        &:nth-child(3) 
+            margin-right: 73px
+        &:nth-child(4) 
+            margin-right: 79px
+    &-link 
+        @include flex-center-column
+        color: #5b5b5b
+        font-family: "Intro Regular"
+        font-size: 12px
+        line-height: 20px
+        text-transform: uppercase
+        letter-spacing: 0.36px
+        text-decoration: none
+        &:hover 
+            color: #e34168
+            &:before
+                width: 41px
+                height: 8px
+                margin-left: -20.5px
+        &:before 
+            transition: all 0.2s ease
+            position: absolute
+            top: 58px
+            left: 50%
+            width: 50px
+            height: 10px
+            margin-left: -25px
+            border-radius: 50%
+            background: linear-gradient(to bottom, #ebebeb 0%, #ddd 100%)
+            content: ''
+    &-icon 
+        transition: all 0.3s 
+        display: block
+        z-index: 2
+        position: relative
+        top: 0
+        width: 60px
+        height: 60px
+        margin: auto
+        margin-bottom: 15px
+        border-radius: 50%
+        background: #1bbdce
+        line-height: 60px
+        text-align: center
+        img 
+            vertical-align: middle
+.nav-item 

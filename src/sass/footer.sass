@@ -1,0 +1,26 @@
+@mixin flex-center-between 
+    display: flex
+    align-items: center
+    justify-content: space-between
+.footer 
+    background-color: #e33861
+    background-image: linear-gradient(to right, #e23760 0%, #f85980 100%)
+    &-body 
+        @include flex-center-between
+    &__social 
+        @include flex-center-between
+.social__item 
+    list-style: none
+    &_icon 
+        transition: all .3s
+        display: block
+        z-index: 2
+        position: relative
+        top: 0
+        width: 46px
+        height: 46px
+        margin: auto auto 15px
+        border-radius: 50%
+        background-color: #e33861
+        line-height: 60px
+        text-align: center
