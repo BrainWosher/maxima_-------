@@ -1,0 +1,77 @@
+body 
+    color: #fff
+@mixin flex-center 
+    display: flex
+    align-items: center
+    justify-content: space-between
+.wrapper 
+    box-sizing: border-box
+    width: 978px
+    margin: 0 auto
+.header 
+    background-color: #00a0e3
+    background-image: linear-gradient(to right, #e23760 0%, #f85980 100%)
+    &-top 
+        @include flex-center
+        &-item 
+            box-sizing: border-box
+            &:hover 
+                cursor: pointer
+    &-schedule 
+        @include flex-center
+        font-family: "Intro Regular"
+        font-size: 12px
+        line-height: 20px
+        text-transform: uppercase
+        letter-spacing: 0.36px
+        background-color: rgba(189,48,82,0.6)        
+        padding: 15px 20px 16px 50px
+        position: relative
+        &:hover 
+            text-decoration: underline
+        &::before 
+            position: absolute
+            content: ''
+            background-image: url(../../img/header/calendar.png)
+            background-position: center
+            background-repeat: no-repeat
+            width: 27px
+            height: 29px
+            left: 38px
+            top: 34px
+            margin-left: -23.5px
+            margin-top: -24.5px
+
+    &-phone 
+        color: #ffa3b9
+        font-family: "Intro Regular"
+        font-size: 14px
+        span
+            color: #f3f9fa
+            font-family: "Intro Bold"
+            font-size: 20px
+            line-height: 20px
+    &-call 
+        @include flex-center
+        font-family: "Intro Regular"
+        font-size: 12px
+        line-height: 20px
+        text-transform: uppercase
+        letter-spacing: 0.36px
+        background-color: rgba(189,48,82,0.6)        
+        padding: 15px 20px 16px 50px
+        position: relative
+        &:hover 
+            text-decoration: underline
+        &::before 
+            position: absolute
+            content: ''
+            background-image: url(../../img/header/call.png)
+            background-position: center
+            background-repeat: no-repeat
+            width: 32px
+            height: 32px
+            left: 28px
+            top: 26px
+            margin-left: -16px
+            margin-top: -16px

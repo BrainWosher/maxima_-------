@@ -1,0 +1,66 @@
+@font-face {
+    font-family: "Intro Bold Alt";
+    src: url("../fonts/Intro-Bold-Alt.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Intro Bold";
+    src: url("../fonts/Intro-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "OpenSans Bold";
+    src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "OpenSans Regular";
+    src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "OpenSans Light";
+    src: url("../fonts/OpenSans-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Roboto Condensed Light";
+    src: url("../fonts/RobotoCondensed-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "OpenSans SemiBold";
+    src: url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Intro Light";
+    src: url("../fonts/Intro-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Intro Regular Alt";
+    src: url("../fonts/Intro-Regular-Alt.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Intro Regular";
+    src: url("../fonts/Intro-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
