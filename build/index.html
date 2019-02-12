@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/normolize.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/sass/main.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 </head>
 
 <body>
@@ -35,40 +37,84 @@
             </ul>
         </div>
     </div>
-<div class="wrapper">
-    <form action="" class="form">
-        <div class="form-parameters">
-            <div class="weight">
-                <div class="form-title">Вес:</div>
-                <input type="text" name="" id="" class="weight-number" placeholder="85 кг">
+    <div class="wrapper">
+        <div class="slider">
+            <article class="slide">
+                <img src="img/slider/slide1.jpg" alt="">
+                <div class="slide-desc">
+                    <h2 class="slider-desc-title"><span>Ты готов бросить себе вызов?</span></h2>
+                    <p></p>
+                </div>
+            </article>
+            <article class="slide">
+                <img src="img/slider/slide2.jpg" alt="">
+                <div class="slide-desc">
+                    <h2 class="slider-desc-title"><span>Ты готов бросить себе вызов?</span></h2>
+                    <p></p>
+                </div>
+            </article>
+            <article class="slide">
+                <img src="img/slider/slide3.jpg" alt="">
+                <div class="slide-desc">
+                    <h2 class="slider-desc-title"><span>Ты готов бросить себе вызов?</span></h2>
+                    <p></p>
+                </div>
+            </article>
+            <article class="slide">
+                <img src="img/slider/slide4.png" alt="">
+                <div class="slide-desc">
+                    <h2 class="slider-desc-title"><span>Ты готов бросить себе вызов?</span></h2>
+                    <p></p>
+                </div>
+            </article>
+            <!-- <div class="slide"><img src="img/slider/slide1.jpg" alt="">
+                <div class="plank"></div>
             </div>
-            <div class="age">
-                <div class="form-title">Возраст:</div>
-                <input type="text" name="" id="" class="age-number" placeholder="30 лет">
+            <div class="slide"><img src="img/slider/slide2.jpg" alt="">
+                <div class="plank"></div>
             </div>
-            <div class="height">
-                <div class="form-title">Рост:</div>
-                <input type="text" name="" id="" class="height-number" placeholder="186 см">
+            <div class="slide"><img src="img/slider/slide3.jpg" alt="">
+                <div class="plank"></div>
             </div>
+            <div class="slide"><img src="img/slider/slide4.png" alt="">
+                <div class="plank"></div>
+            </div> -->
         </div>
-        <div class="sex">
-            <div class="form-title">Кто вы?</div>
-            <div class="form-buttons">
-                <button class="form-button">Мужчина</button>
-                <button class="form-button">Женщина</button>
+    </div>
+    <div class="wrapper">
+        <form action="" class="form">
+            <div class="form-parameters">
+                <div class="weight">
+                    <div class="form-title">Вес:</div>
+                    <input type="text" name="" id="" class="weight-number" placeholder="85 кг">
+                </div>
+                <div class="age">
+                    <div class="form-title">Возраст:</div>
+                    <input type="text" name="" id="" class="age-number" placeholder="30 лет">
+                </div>
+                <div class="height">
+                    <div class="form-title">Рост:</div>
+                    <input type="text" name="" id="" class="height-number" placeholder="186 см">
+                </div>
             </div>
-        </div>
-        <div class="figure">
-            <div class="form-title">Телосложение:</div>
-            <div class="form-buttons">
-                <button class="form-button">Нормальное</button>
-                <button class="form-button">Полное</button>
-                <button class="form-button">Хрупкое</button>
+            <div class="sex">
+                <div class="form-title">Кто вы?</div>
+                <div class="form-buttons">
+                    <button class="form-button is-checked">Мужчина</button>
+                    <button class="form-button">Женщина</button>
+                </div>
             </div>
-        </div>
-        <button class="main-button">Расчитать</button>
-    </form>
-</div>
+            <div class="figure">
+                <div class="form-title">Телосложение:</div>
+                <div class="form-buttons">
+                    <button class="form-button">Нормальное</button>
+                    <button class="form-button">Полное</button>
+                    <button class="form-button">Хрупкое</button>
+                </div>
+            </div>
+            <button class="main-button">Расчитать</button>
+        </form>
+    </div>
     <footer class="footer">
         <div class="wrapper">
             <div class="footer-body">
@@ -103,7 +149,19 @@
             </div>
         </div>
     </footer>
-
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+            });
+        });
+    </script>
 </body>
 
 </html>

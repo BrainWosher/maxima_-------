@@ -18,6 +18,7 @@
     color: #fff
     &-parameters 
         @include flex-center
+        margin-bottom: 40px
         input
             width: 80px
             height: 42px
@@ -38,15 +39,74 @@
         font-family: "Intro Regular"
         line-height: 2.5
         text-align: right
+    &-button 
+        min-width: 180px
+        max-height: 40px    
+        border-radius: 20px
+        border: 2px solid #41edff
+        font-size: 13px
+        font-family: "OpenSans Bold"
+        color: #fff
+        background-color: transparent
+        line-height: 1
+        text-align: center
+        padding-top: 13px
+        padding-bottom: 13px
+        &:hover 
+            cursor: pointer
+            background-color: #41edff
+.is-checked 
+    border-color: #fff
+    background-color: #fff
+    color: #21d0e2
+    &:hover 
+        cursor: pointer
+        color: #626161
+.form-button .is-checked 
+    &:hover 
+        cursor: pointer
+        color: #626161
 .weight 
     display: flex
 .age 
     display: flex
+    padding-left: 35px
     &-number 
         color: #ffffff
 .height 
     display: flex
+    padding-left: 64px
 .sex 
     display: flex
+    margin-bottom: 40px
+    .form 
+        &-title 
+            padding-right: 12px
+        &-button 
+            &:nth-child(1) 
+                margin-right: 20px
+    
 .figure 
     display: flex
+    margin-bottom: 38px
+    .form 
+        &-title 
+            padding-right: 14px
+        &-button 
+            &:nth-child(1) 
+                margin-right: 20px
+            &:nth-child(2) 
+                margin-right: 20px
+.main-button 
+    font-size: 22px
+    font-family: "Intro Regular Alt"
+    color: #fff
+    line-height: 1
+    text-align: center
+    background-color: transparent
+    border-radius: 3px
+    border: 2px solid #ffffff
+    padding: 14.5px 59px
+    &:hover 
+        cursor: pointer
+        background-color: #41edff
