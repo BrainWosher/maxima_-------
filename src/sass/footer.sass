@@ -2,15 +2,93 @@
     display: flex
     align-items: center
     justify-content: space-between
+@mixin flex-start-between 
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
 .footer 
     background-color: #e33861
     background-image: linear-gradient(to right, #e23760 0%, #f85980 100%)
+    padding-top: 47px
+    padding-bottom: 56px
     &-body 
-        @include flex-center-between
+        @include flex-start-between
+    &__contact 
+        position: relative
+        &::before 
+            position: absolute
+            right: 100%
+            content: '\00a9'
+            font-family: "OpenSans Regular"            
     &__social 
         @include flex-center-between
+        margin: 0
+        padding: 0
+    &__title 
+        font-size: 18px
+        font-family: "Intro Regular"
+        line-height: 1.111        
+        padding-bottom: 19px
+    &__address 
+        font-size: 13px
+        font-family: "OpenSans Regular"
+        line-height: 1.9 
+    &__sales-department 
+        font-size: 13px
+        font-family: "OpenSans Regular"
+        line-height: 1.9 
+        span 
+            font-family: "OpenSans Bold"
+    &__reception-desk
+        font-size: 13px
+        font-family: "OpenSans Regular"
+        line-height: 1.9       
+        span 
+            font-family: "OpenSans Bold"
+    &__last-part
+        display: flex
+        align-items: flex-start
+        justify-content: flex-end
+        flex-direction: column
+    &__rules 
+        font-family: "OpenSans Regular"
+        font-size: 12px
+        line-height: 1.667
+        a
+            font-family: "OpenSans Bold"
+            font-size: 12px
+            line-height: 1.667
+            color: #fff
+            text-decoration: none
+            &:hover 
+                text-decoration: underline
+
+.opening-hours 
+    font-size: 13px
+    font-family: "OpenSans Regular"
+    color: rgb(255, 255, 255)
+    line-height: 1.9   
+    position: absolute
 .social__item 
     list-style: none
+    &:nth-child(1) .social__item_icon
+        line-height: 50px
+        margin-left: 0
+        &:hover .social__item_icon
+            background: #1bbdce
+            border: 2px solid #fff
+    &:nth-child(2)
+        &:hover .social__item_icon
+            background: #3b5998
+            border: 2px solid #fff
+    &:nth-child(3)
+        &:hover .social__item_icon
+            background-color: #f2720c
+            border: 2px solid #fff
+    &:nth-child(4)
+        &:hover .social__item_icon
+            background-color: #cc181e
+            border: 2px solid #fff
     &_icon 
         transition: all .3s
         display: block
@@ -19,8 +97,12 @@
         top: 0
         width: 46px
         height: 46px
-        margin: auto auto 15px
+        margin: auto auto 40px 19px
         border-radius: 50%
+        border: 2px solid transparent
         background-color: #e33861
         line-height: 60px
         text-align: center
+.social__item:hover .social__item_icon
+    background: #1bbdce
+    border: 2px solid #fff
