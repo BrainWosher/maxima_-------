@@ -37,50 +37,42 @@
             </ul>
         </div>
     </div>
-    <div class="wrapper">
-        <div class="slider">
+
+        <article class="slider">
             <article class="slide">
                 <img src="img/slider/slide1.jpg" alt="">
-                <div class="slide-desc">
-                    <h2 class="slider-desc-title"><span>Ты готов бросить себе вызов?</span></h2>
-                    <p></p>
+                <div class="slide__desc">
+                    <div class="slide__desc_title"><span>Карта на полгода 
+                            за 9900!</span></div>
+                    <div class="slide__desc_text"><span>21 декабря в фитнес-клубе Максима прошли соревнования по армрестлингу.</span></div>
                 </div>
             </article>
             <article class="slide">
                 <img src="img/slider/slide2.jpg" alt="">
-                <div class="slide-desc">
-                    <h2 class="slider-desc-title"><span>Ты готов бросить себе вызов?</span></h2>
-                    <p></p>
+                <div class="slide__desc">
+                    <div class="slide__desc_title"><span>Карта на полгода 
+                            за 9900!</span></div>
+                    <div class="slide__desc_text"><span>21 декабря в фитнес-клубе Максима прошли соревнования по армрестлингу.</span></div>
                 </div>
             </article>
             <article class="slide">
                 <img src="img/slider/slide3.jpg" alt="">
-                <div class="slide-desc">
-                    <h2 class="slider-desc-title"><span>Ты готов бросить себе вызов?</span></h2>
-                    <p></p>
+                <div class="slide__desc">
+                    <div class="slide__desc_title"><span>Карта на полгода 
+                            за 9900!</span></div>
+                    <div class="slide__desc_text"><span>21 декабря в фитнес-клубе Максима прошли соревнования по армрестлингу.</span></div>
                 </div>
             </article>
             <article class="slide">
                 <img src="img/slider/slide4.png" alt="">
-                <div class="slide-desc">
-                    <h2 class="slider-desc-title"><span>Ты готов бросить себе вызов?</span></h2>
-                    <p></p>
+                <div class="slide__desc">
+                    <div class="slide__desc_title"><span>Карта на полгода 
+                            за 9900!</span></div>
+                    <div class="slide__desc_text"><span>21 декабря в фитнес-клубе Максима прошли соревнования по армрестлингу.</span></div>
                 </div>
             </article>
-            <!-- <div class="slide"><img src="img/slider/slide1.jpg" alt="">
-                <div class="plank"></div>
-            </div>
-            <div class="slide"><img src="img/slider/slide2.jpg" alt="">
-                <div class="plank"></div>
-            </div>
-            <div class="slide"><img src="img/slider/slide3.jpg" alt="">
-                <div class="plank"></div>
-            </div>
-            <div class="slide"><img src="img/slider/slide4.png" alt="">
-                <div class="plank"></div>
-            </div> -->
-        </div>
-    </div>
+        </article>
+    
     <div class="wrapper">
         <form action="" class="form">
             <div class="form-parameters">
@@ -158,7 +150,13 @@
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 autoplay: true,
-                autoplaySpeed: 2000,
+                autoplaySpeed: 5000,
+                navigation: {
+                    nextEl: ' .swiper-button-next-1',
+                    prevEl: ' .swiper-button-prev-1'
+                },
+                // Default parameters
+                spaceBetween: 30,
             });
         });
     </script>
