@@ -1,0 +1,63 @@
+.walk 
+    position: relative
+    &-man 
+        position: absolute
+        z-index: 30
+        bottom: -88px
+        left: 0
+    &-desk 
+        position: relative
+        width: 372px
+        margin: auto
+        padding: 6px
+        background: #fff
+        color: #626161
+        font-size: 20px
+        font-family: "Intro Regular"
+        color: #626161
+        line-height: 1.2
+        margin-bottom: 78px
+        &::before 
+            content: ''
+            position: absolute
+            width: 10px
+            height: 78px
+            top: 100%
+            left: 50px
+            background-color: #e33861
+            background-image: linear-gradient(to right, #abbbbd 0%, #c4d4d6 99%, #c4d4d6 100%)
+        &::after 
+            content: ''
+            position: absolute
+            width: 10px
+            height: 78px
+            top: 100%
+            right: 50px
+            background-color: #e33861
+            background-image: linear-gradient(to right, #abbbbd 0%, #c4d4d6 99%, #c4d4d6 100%)
+        &__title
+            color: #626161
+        &__meters 
+            color: #626161
+            font-family: "OpenSans Regular"
+            font-size: 14px
+            line-height: 22px
+        &__cal 
+            color: #626161
+            font-family: "OpenSans Regular"
+            font-size: 14px
+            line-height: 22px
+        &-info 
+            position: relative
+            padding: 25px 30px
+            border: 5px solid #d3eff2
+.meters 
+    color: #1bbbd9
+    font-family: "Intro Bold Alt"
+    font-size: 20px
+    line-height: 22px
+.calories 
+    color: #1bbbd9
+    font-family: "Intro Bold Alt"
+    font-size: 20px
+    line-height: 22px

@@ -46,18 +46,21 @@
     font-style: normal;
     font-weight: 600;
 }
+
 @font-face {
     font-family: "Intro Light";
     src: url("../fonts/Intro-Light.ttf") format("truetype");
     font-style: normal;
     font-weight: 300;
 }
+
 @font-face {
     font-family: "Intro Regular Alt";
     src: url("../fonts/Intro-Regular-Alt.ttf") format("truetype");
     font-style: normal;
     font-weight: 400;
 }
+
 @font-face {
     font-family: "Intro Regular";
     src: url("../fonts/Intro-Regular.ttf") format("truetype");
