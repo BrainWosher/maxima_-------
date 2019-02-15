@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $('.slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -21,8 +21,11 @@ $(document).ready(function() {
 //     }, 5000);
 // })();
 let widthEventsBlock = document.body.clientWidth - 192;
-(function() {
-    TweenMax.set('.events-skier', { left: widthEventsBlock, bottom: 36 });
+(function () {
+    TweenMax.set('.events-skier', {
+        left: widthEventsBlock,
+        bottom: 36
+    });
     TweenMax.to('.events-skier', 7, {
         left: -widthEventsBlock,
         repeat: -1,
@@ -33,21 +36,23 @@ let widthEventsBlock = document.body.clientWidth - 192;
 let widthWM = document.body.clientWidth - 154;
 let man = '.walk-man';
 const element = document.querySelector('.walk-man');
-const style = getComputedStyle(element);
-const left = style.left;
-console.log(left);
-(function() {
-    setInterval(function() {
-        TweenMax.to(man, 7, { left: widthWM });
-        if (left === widthWM) {
-            TweenMax.set(man, { transform: rotateY('180deg') });
-            TweenMax.to(man, 7, { left: -widthWM });
-        } else if (left === 0) {
-            TweenMax.set(man, { transform: rotateY('-180deg') });
-            TweenMax.to(man, 7, { left: widthWM });
-        } else {
-            console.log('что-то не так');
-        }
-        //     }, 5000);
-    })
-})();
+
+function right() {
+    element.style.transform = "rotateY(0)";
+    TweenMax.to(man, 4, {
+        left: widthWM,
+        ease: Power0.easeNone,
+        onComplete: left
+    });
+};
+
+right();
+
+function left() {
+    element.style.transform = "rotateY(-180deg)";
+    TweenMax.to(man, 4, {
+        left: 0,
+        ease: Power0.easeNone,
+        onComplete: right
+    });
+};
