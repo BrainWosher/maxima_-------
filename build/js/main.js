@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
     $('.slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -21,7 +21,7 @@ $(document).ready(function () {
 //     }, 5000);
 // })();
 let widthEventsBlock = document.body.clientWidth - 192;
-(function () {
+(function() {
     TweenMax.set('.events-skier', {
         left: widthEventsBlock,
         bottom: 36
@@ -33,7 +33,7 @@ let widthEventsBlock = document.body.clientWidth - 192;
         bottom: -76
     });
 })();
-let widthWM = document.body.clientWidth - 154;
+let widthWM = document.body.clientWidth - 277;
 let man = '.walk-man';
 const element = document.querySelector('.walk-man');
 
@@ -44,9 +44,11 @@ function right() {
         ease: Power0.easeNone,
         onComplete: left
     });
+
 };
 
 right();
+counters();
 
 function left() {
     element.style.transform = "rotateY(-180deg)";
@@ -55,4 +57,17 @@ function left() {
         ease: Power0.easeNone,
         onComplete: right
     });
+};
+
+function counters() {
+    let meters = $('.meters');
+    let calories = $('.calories');
+    let count;
+    clearInterval(count);
+    count = setInterval(function() {
+        meters.text(parseInt(meters.text()) + 1);
+        calories.text(Number(
+                parseFloat(calories.text()) + 0.06)
+            .toFixed(2));
+    }, 1000);
 };
