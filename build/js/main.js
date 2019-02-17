@@ -12,14 +12,6 @@ $(document).ready(function() {
         spaceBetween: 30,
     });
 });
-// let widthEventsBlock = document.body.clientWidth - 192;
-// (function() {
-//     TweenMax.set('.events-skier', { left: widthEventsBlock, bottom: 36 });
-//     setInterval(function() {
-//         TweenMax.set('.events-skier', { left: widthEventsBlock, bottom: 36 });
-//         TweenMax.to('.events-skier', 7, { left: -widthEventsBlock, bottom: -76 });
-//     }, 5000);
-// })();
 let widthEventsBlock = document.body.clientWidth - 192;
 (function() {
     TweenMax.set('.events-skier', {
@@ -71,3 +63,13 @@ function counters() {
             .toFixed(2));
     }, 1000);
 };
+$('.sex-button').click(function(e) {
+    e.preventDefault();
+    $(".sex-button").not(this).removeClass('is-checked');
+    $(this).toggleClass('is-checked');
+});
+$('.figure-button').click(function(e) {
+    e.preventDefault();
+    $(".figure-button").not(this).removeClass('is-checked');
+    $(this).toggleClass('is-checked');
+});
