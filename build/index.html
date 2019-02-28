@@ -103,22 +103,47 @@
             <div class="form-parameters">
                 <div class="weight">
                     <div class="form-title">Вес:</div>
-                    <input type="text" name="" id="" class="weight-number" placeholder="85 кг">
+                    <input type="text" name="" id="" class="weight-number" placeholder="85 кг" value="">
                 </div>
                 <div class="age">
                     <div class="form-title">Возраст:</div>
-                    <input type="text" name="" id="" class="age-number" placeholder="30 лет">
+                    <input type="text" name="" id="" class="age-number" placeholder="30 лет" value="">
                 </div>
                 <div class="height">
                     <div class="form-title">Рост:</div>
-                    <input type="text" name="" id="" class="height-number" placeholder="186 см">
+                    <input type="text" name="" id="" class="height-number" placeholder="186 см" value="">
                 </div>
             </div>
-            <div class="sex">
+            <div class="form-section">
+                <div class="form-titles">
+                    <div class="form-title">Кто вы?</div>
+                    <div class="form-title">Телосложение</div>
+                </div>
+                <div class="form-buttons">
+                    <div class="sex-buttons">
+                        <input type="radio" checked name="sex" class="form-radio" value="man" id="man">
+                        <label class="form-label" for="man">Мужчина</label>
+                        <input type="radio" name="sex" value="woman" class="form-radio" id="woman">
+                        <label class="form-label" for="woman">Женщина</label>
+                    </div>
+                    <div class="figure-buttons">
+                        <input type="radio" checked name="figure" class="form-radio" value="normal" id="normal">
+                        <label class="form-label" for="normal">Нормальное</label>
+                        <input type="radio" checked name="figure" class="form-radio" value="normal" id="full">
+                        <label class="form-label" for="full">Полное</label>
+                        <input type="radio" checked name="figure" class="form-radio" value="normal" id="fragile">
+                        <label class="form-label" for="fragile">Хрупкое</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- <div class="sex">
                 <div class="form-title">Кто вы?</div>
                 <div class="form-buttons">
                     <button class="form-button sex-button is-checked">Мужчина</button>
-                    <button class="form-button sex-button">Женщина</button>                    
+                    <button class="form-button sex-button">Женщина</button>
                 </div>
             </div>
             <div class="figure">
@@ -126,9 +151,9 @@
                 <div class="form-buttons">
                     <button class="form-button figure-button is-checked">Нормальное</button>
                     <button class="form-button figure-button">Полное</button>
-                    <button class="form-button figure-button">Хрупкое</button>                    
+                    <button class="form-button figure-button">Хрупкое</button>
                 </div>
-            </div>
+            </div> -->
             <button class="main-button">Расчитать</button>
         </form>
     </div>

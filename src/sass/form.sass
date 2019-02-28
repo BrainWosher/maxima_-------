@@ -71,6 +71,20 @@
         &:hover 
             cursor: pointer
             background-color: #41edff
+    &-section 
+        display: flex
+        align-items: center
+        justify-content: flex-end
+    &-titles 
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        flex-direction: column
+    &-buttons
+        display: flex
+        align-items: flex-start
+        justify-content: flex-end
+        flex-direction: column
 .is-checked 
     border-color: #fff
     background-color: #fff
@@ -93,27 +107,17 @@
     display: flex
     padding-left: 64px
 .sex 
-    display: flex
-    margin-bottom: 40px
-    .form 
-        &-title 
-            padding-right: 12px
-        &-button 
-            &:nth-child(1) 
-                margin-right: 20px
-    
+    &-buttons
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        flex-wrap: wrap
 .figure 
-    display: flex
-    margin-bottom: 38px
-    flex-wrap: wrap
-    .form 
-        &-title 
-            padding-right: 14px
-        &-button 
-            &:nth-child(1) 
-                margin-right: 20px
-            &:nth-child(2) 
-                margin-right: 20px
+    &-buttons
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        flex-wrap: wrap
 .main-button 
     font-size: 22px
     font-family: "Intro Regular Alt"
@@ -127,3 +131,32 @@
     &:hover 
         cursor: pointer
         background-color: #41edff
+.form-radio
+    display: none
+.form-label
+    max-width: 180px
+    max-height: 40px
+    border-radius: 20px
+    border: 2px solid #41edff
+    font-size: 13px
+    font-family: OpenSans Bold
+    color: #fff
+    background-color: transparent
+    line-height: 1
+    text-align: center
+    padding-top: 13px
+    padding-bottom: 13px
+    padding: 13px 58px
+    cursor: pointer
+    margin-right: 20px
+    margin-bottom: 40px
+    &:hover 
+        background: #41edff
+
+.form-radio:checked + label 
+    &.form-label  
+        border-color: #fff
+        background-color: #fff
+        color: #21d0e2 
+        &:hover        
+            color: #626161

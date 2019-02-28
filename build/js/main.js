@@ -11,65 +11,90 @@ $(document).ready(function() {
         // Default parameters
         spaceBetween: 30,
     });
-});
-let widthEventsBlock = document.body.clientWidth - 192;
-(function() {
-    TweenMax.set('.events-skier', {
-        left: widthEventsBlock,
-        bottom: 36
+    let widthEventsBlock = document.body.clientWidth - 192;
+    (function() {
+        TweenMax.set('.events-skier', {
+            left: widthEventsBlock,
+            bottom: 36
+        });
+        TweenMax.to('.events-skier', 7, {
+            left: -widthEventsBlock,
+            repeat: -1,
+            repeatDelay: 1,
+            bottom: -76
+        });
+    })();
+    let widthWM = document.body.clientWidth - 277;
+    let man = '.walk-man';
+    const element = document.querySelector('.walk-man');
+
+    function right() {
+        element.style.transform = "rotateY(0)";
+        TweenMax.to(man, 4, {
+            left: widthWM,
+            ease: Power0.easeNone,
+            onComplete: left
+        });
+
+    };
+
+    right();
+    counters();
+
+    function left() {
+        element.style.transform = "rotateY(-180deg)";
+        TweenMax.to(man, 4, {
+            left: 0,
+            ease: Power0.easeNone,
+            onComplete: right
+        });
+    };
+
+    function counters() {
+        let meters = $('.meters');
+        let calories = $('.calories');
+        let count;
+        clearInterval(count);
+        count = setInterval(function() {
+            meters.text(parseInt(meters.text()) + 1);
+            calories.text(Number(
+                    parseFloat(calories.text()) + 0.06)
+                .toFixed(2));
+        }, 1000);
+    };
+    $('.sex-button').click(function(e) {
+        e.preventDefault();
+        $(".sex-button").not(this).removeClass('is-checked');
+        $(this).toggleClass('is-checked');
     });
-    TweenMax.to('.events-skier', 7, {
-        left: -widthEventsBlock,
-        repeat: -1,
-        repeatDelay: 1,
-        bottom: -76
+    $('.figure-button').click(function(e) {
+        e.preventDefault();
+        $(".figure-button").not(this).removeClass('is-checked');
+        $(this).toggleClass('is-checked');
     });
-})();
-let widthWM = document.body.clientWidth - 277;
-let man = '.walk-man';
-const element = document.querySelector('.walk-man');
+    $('.main-button').click(function(e) {
+        e.preventDefault();
+        let weight = $('.weight-number').val();
+        let height = $('.height-number').val();
+        let age = $('.age-number').val();
+        let res;
+        console.log('Возраст: ' + age, 'Вес' + weight, 'Рост' + height);
 
-function right() {
-    element.style.transform = "rotateY(0)";
-    TweenMax.to(man, 4, {
-        left: widthWM,
-        ease: Power0.easeNone,
-        onComplete: left
+        function check2() {
+            let selectedSex = $('input[name=sex]:checked').val();
+            let currentUrl = $(location).attr('href');
+            let uri;
+            if (selectedSex === 'man') {
+                res = (height - 100) * 1.15;
+            } else {
+                res = (height - 110) * 1.15;
+            }
+            alert('Ваш идеальный вес: ' + res);
+            history.pushState(currentUrl, "New page title", res);
+
+            history.pathname = res;
+        }
+        check2();
+
     });
-
-};
-
-right();
-counters();
-
-function left() {
-    element.style.transform = "rotateY(-180deg)";
-    TweenMax.to(man, 4, {
-        left: 0,
-        ease: Power0.easeNone,
-        onComplete: right
-    });
-};
-
-function counters() {
-    let meters = $('.meters');
-    let calories = $('.calories');
-    let count;
-    clearInterval(count);
-    count = setInterval(function() {
-        meters.text(parseInt(meters.text()) + 1);
-        calories.text(Number(
-                parseFloat(calories.text()) + 0.06)
-            .toFixed(2));
-    }, 1000);
-};
-$('.sex-button').click(function(e) {
-    e.preventDefault();
-    $(".sex-button").not(this).removeClass('is-checked');
-    $(this).toggleClass('is-checked');
-});
-$('.figure-button').click(function(e) {
-    e.preventDefault();
-    $(".figure-button").not(this).removeClass('is-checked');
-    $(this).toggleClass('is-checked');
 });
