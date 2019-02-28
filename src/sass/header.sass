@@ -7,6 +7,10 @@ body
 @mixin flex-center
     display: flex
     align-items: center
+@mixin flex-center-start
+    display: flex
+    align-items: center
+    justify-content: flex-start
 @mixin flex-center-column 
     display: flex
     align-items: center
@@ -29,15 +33,10 @@ body
         @include flex-center-between
         font-family: "Intro Regular"
         font-size: 12px
-        // line-height: 20px
         text-transform: uppercase
         letter-spacing: 0.36px
         background-color: rgba(189,48,82,0.6)        
         padding: 15px 20px 16px 60px
-        // font-size: 12px
-        // font-family: "Intro Regular"
-        // color: rgb(255, 255, 255)
-        // text-transform: uppercase
         line-height: 1.667
         text-align: center
 
@@ -113,25 +112,37 @@ body
         background-image: url(../../img/header/main-logo.png)
         background-position: center
         background-repeat: no-repeat
-        margin-right: 106px
+        margin-right: 72px
+        flex-basis: 20.4%
 .nav 
-    @include flex-center-between
+    @include flex-center-start
+    flex-wrap: wrap    
     margin: 0
     padding: 0
+    flex-basis: 72%
+    align-content: stretch
     &-item 
         list-style: none
-        position: relative   
+        position: relative 
+        flex: 0 1 20%
+        // width: auto
+        // flex-basis: 20%  
+        // max-width: 20%
         &:hover .nav-icon
             top: -20px
-            background: #e23861    
-        &:first-child 
-            margin-right: 63px  
-        &:nth-child(2) 
-            margin-right: 51px
-        &:nth-child(3) 
-            margin-right: 73px
-        &:nth-child(4) 
-            margin-right: 79px
+            background: #e23861   
+        // &_first 
+        //     margin-left: 0
+        // &_fifth 
+        //     flex-basis: 15%
+        // &:first-child 
+        //     margin-right: 63px  
+        // &:nth-child(2) 
+        //     margin-right: 51px
+        // &:nth-child(3) 
+        //     margin-right: 73px
+        // &:nth-child(4) 
+        //     margin-right: 79px
     &-link 
         @include flex-center-column
         color: #5b5b5b

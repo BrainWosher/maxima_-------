@@ -15,6 +15,7 @@
         @include flex-start-between
     &__contact 
         position: relative
+        flex-basis: 33%
         &::before 
             position: absolute
             right: 100%
@@ -50,6 +51,7 @@
         align-items: flex-start
         justify-content: flex-end
         flex-direction: column
+        flex-basis: 33%
     &__rules 
         font-family: "OpenSans Regular"
         font-size: 12px
@@ -62,7 +64,9 @@
             text-decoration: none
             &:hover 
                 text-decoration: underline
-
+    &__opening-hours 
+        flex-basis: 33%
+        margin-left: 102px
 .opening-hours 
     font-size: 13px
     font-family: "OpenSans Regular"
