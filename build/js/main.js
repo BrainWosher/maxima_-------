@@ -62,34 +62,23 @@ $(document).ready(function() {
                 .toFixed(2));
         }, 1000);
     };
-    $('.sex-button').click(function(e) {
-        e.preventDefault();
-        $(".sex-button").not(this).removeClass('is-checked');
-        $(this).toggleClass('is-checked');
-    });
-    $('.figure-button').click(function(e) {
-        e.preventDefault();
-        $(".figure-button").not(this).removeClass('is-checked');
-        $(this).toggleClass('is-checked');
-    });
     $('.main-button').click(function(e) {
         e.preventDefault();
         let weight = $('.weight-number').val();
         let height = $('.height-number').val();
         let age = $('.age-number').val();
         let res;
-        console.log('Возраст: ' + age, 'Вес' + weight, 'Рост' + height);
+        // console.log('Возраст: ' + age, 'Вес' + weight, 'Рост' + height);
 
         function check2() {
             let selectedSex = $('input[name=sex]:checked').val();
+            let selectedFigure = $('input[name=figure]:checked').val();
             let currentUrl = $(location).attr('href');
-            let uri;
-            if (selectedSex === 'man') {
-                res = (height - 100) * 1.15;
-            } else {
-                res = (height - 110) * 1.15;
-            }
-            alert('Ваш идеальный вес: ' + res);
+            
+            res = ('Возраст:' + age + ', ' + 'Вес: ' + weight + ', '  + 'Рост:' + height + ', '  + selectedSex + ', '  + selectedFigure);
+            alert('Выбранные параметры: ' + res);
+
+
             history.pushState(currentUrl, "New page title", res);
 
             history.pathname = res;
