@@ -1,7 +1,3 @@
-@mixin flex-center
-    display: flex
-    align-items: center
-    justify-content: center
 @mixin flex-center-column
     display: flex
     align-items: center
@@ -11,27 +7,101 @@
     display: flex
     align-items: flex-start
     justify-content: space-between
+@mixin form-params-input
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    flex-wrap: wrap
+    width: 100%
+@mixin flex-start
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+@mixin label
+    box-sizing: border-box
+    max-width: 180px
+    max-height: 40px
+    width: 100%
+    border-radius: 20px
+    border: 2px solid #41edff
+    font-size: 13px
+    font-family: OpenSans Bold
+    color: #fff
+    background-color: transparent
+    line-height: 1
+    text-align: center
+    padding: 11px 0
+    cursor: pointer
+    margin-right: 20px
+    margin-bottom: 40px
+    &:hover 
+        background: #41edff
 .calculator 
-    &__title 
+    &-title 
         font-size: 34px
         font-family: "Intro Regular Alt"
         color: #626161
         line-height: 1.324
         text-align: center
         padding-bottom: 15px
-    &__description 
+    &-description 
         font-size: 22px
         font-family: "Intro Light"
         color: #626161
         line-height: 1
         text-align: center
         padding-bottom: 40px
+.weight 
+    display: flex
+    &__title
+        font-size: 18px
+        font-family: "Intro Regular"
+        line-height: 2.5
+        text-align: right
+        margin-bottom: 37px
+    &__number
+        color: #ffffff
+.age 
+    display: flex
+    padding-left: 34px
+    &__title
+        font-size: 18px
+        font-family: "Intro Regular"
+        line-height: 2.5
+        text-align: right
+        margin-bottom: 37px
+    &__number
+        color: #ffffff
+.height
+    display: flex
+    padding-left: 63px
+    &__title
+        font-size: 18px
+        font-family: "Intro Regular"
+        line-height: 2.5
+        text-align: right
+        margin-bottom: 37px
+    &__number
+        color: #ffffff
 .form 
     @include flex-center-column 
     padding: 50px
     background: #1dc1db
     color: #fff
     margin-bottom: 53px
+    &-titles 
+        display: flex
+        align-items: flex-end
+        justify-content: space-between
+        flex-direction: column
+        flex-basis: 24%
+        margin-right: 13px 
+        &__item
+            font-size: 18px
+            font-family: "Intro Regular"
+            line-height: 2.5
+            text-align: right
+            margin-bottom: 30px
     &-parameters 
         @include flex-start-between 
         input
@@ -49,125 +119,51 @@
             margin-left: 13px
             &::placeholder 
                 color: #ffffff
-    &-title 
-        font-size: 18px
-        font-family: "Intro Regular"
-        line-height: 2.5
-        text-align: right
-        margin-bottom: 30px
-    &-button 
-        min-width: 180px
-        max-height: 40px    
-        border-radius: 20px
-        border: 2px solid #41edff
-        font-size: 13px
-        font-family: "OpenSans Bold"
+    &-section 
+        @include flex-start
+        width: 100%
+    &-main-button 
+        box-sizing: border-box
+        font-size: 22px
+        font-family: "Intro Regular Alt"
         color: #fff
-        background-color: transparent
         line-height: 1
         text-align: center
-        padding-top: 13px
-        padding-bottom: 13px
+        background-color: transparent
+        border-radius: 3px
+        border: 2px solid #ffffff
+        padding: 14.5px 59px
         &:hover 
             cursor: pointer
             background-color: #41edff
-    &-section 
-        display: flex
-        align-items: flex-start
-        justify-content: flex-start
-        width: 100%
-    &-titles 
-        display: flex
-        align-items: flex-end
-        justify-content: space-between
-        flex-direction: column
-        flex-basis: 24%
-        margin-right: 13px    
-    &-buttons
-        display: flex
-        align-items: flex-start
-        justify-content: flex-end
-        flex-direction: column
-        flex-basis: 75%
-        width: 100%
-input.weight-number 
-    margin-left: 0
-.weight 
+    &-buttons-sex
+        @include form-params-input
+    &-buttons-figure
+        @include form-params-input
+.buttons-form
     display: flex
-.age 
-    display: flex
-    padding-left: 34px
-    &-number 
-        color: #ffffff
-    &-title 
-        font-size: 18px
-        font-family: "Intro Regular"
-        line-height: 2.5
-        text-align: right
-        margin-bottom: 37px
-.height 
-    display: flex
-    padding-left: 63px
-    &-title 
-        font-size: 18px
-        font-family: "Intro Regular"
-        line-height: 2.5
-        text-align: right
-        margin-bottom: 37px
-.sex 
-    &-buttons
-        display: flex
-        align-items: center
-        justify-content: flex-start
-        flex-wrap: wrap
-        width: 100%
-.figure 
-    &-buttons
-        display: flex
-        align-items: center
-        justify-content: flex-start
-        flex-wrap: wrap    
-        width: 100%    
-.main-button 
-    box-sizing: border-box
-    font-size: 22px
-    font-family: "Intro Regular Alt"
-    color: #fff
-    line-height: 1
-    text-align: center
-    background-color: transparent
-    border-radius: 3px
-    border: 2px solid #ffffff
-    padding: 14.5px 59px
-    &:hover 
-        cursor: pointer
-        background-color: #41edff
-.form-radio
-    display: none
-.form-label
-    box-sizing: border-box
-    max-width: 180px
-    max-height: 40px
+    align-items: flex-start
+    justify-content: flex-end
+    flex-direction: column
+    flex-basis: 75%
     width: 100%
-    border-radius: 20px
-    border: 2px solid #41edff
-    font-size: 13px
-    font-family: OpenSans Bold
-    color: #fff
-    background-color: transparent
-    line-height: 1
-    text-align: center
-    padding-top: 13px
-    padding-bottom: 13px
-    padding: 11px 0
-    cursor: pointer
-    margin-right: 20px
-    margin-bottom: 40px
-    &:hover 
-        background: #41edff
-
-.form-radio:checked + label 
-    &.form-label  
+.form-buttons-sex__radio
+    display: none
+.form-buttons-sex__label
+    @include label
+.form-buttons-sex__radio:checked + label 
+    &.form-buttons-sex__label  
+        border-color: #fff
+        background-color: #fff
+        color: #21d0e2 
+        &:hover        
+            color: #626161
+.form-buttons-figure__radio
+    display: none
+.form-buttons-figure__label
+    @include label
+.form-buttons-figure__radio:checked + label 
+    &.form-buttons-figure__label  
         border-color: #fff
         background-color: #fff
         color: #21d0e2 

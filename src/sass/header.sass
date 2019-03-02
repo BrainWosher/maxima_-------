@@ -103,7 +103,7 @@ body
             margin-left: -16px
             margin-top: -16px
 .main 
-    @include flex-center
+    @include flex-center-between
     margin-top: 37px    
     margin-bottom: 36px
     &__logo 
@@ -115,27 +115,29 @@ body
         margin-right: 72px
         flex-basis: 20.4%
 .nav 
-    @include flex-center-start
+    display: flex
+    align-items: center
+    justify-content: space-evenly
     flex-wrap: wrap    
     margin: 0
     padding: 0
-    flex-basis: 72%
-    align-content: stretch
-    &-item 
+    flex-basis: 70.5%
+    &__item 
         list-style: none
         position: relative 
-        flex: 0 1 20%
-        &:hover .nav-icon
+        flex: 0 1 auto
+        max-width: 110px
+        // width: 100%
+        &:hover .nav__icon
             top: -20px
             background: #e23861   
-    &-link 
+    &__link 
         @include flex-center-column
         color: #5b5b5b
         font-family: "Intro Regular"
         font-size: 12px
         line-height: 20px
         text-transform: uppercase
-        letter-spacing: 0.36px
         text-decoration: none
         &:hover 
             color: #e34168
@@ -154,7 +156,7 @@ body
             border-radius: 50%
             background: linear-gradient(to bottom, #ebebeb 0%, #ddd 100%)
             content: ''
-    &-icon 
+    &__icon 
         transition: all 0.3s 
         display: block
         z-index: 2
@@ -170,3 +172,5 @@ body
         text-align: center
         img 
             vertical-align: middle
+.nav__item+.nav__item 
+    margin-left: 60px

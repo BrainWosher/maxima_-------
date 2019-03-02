@@ -30,20 +30,17 @@
         <div class="main">
             <div class="main__logo"></div>
             <nav class="nav">
-                <li class="nav-item nav-item_first"><a href="#" class="nav-link "><i class="nav-icon"><img src="/img/nav/club.png"
-                                alt=""></i>Наш клуб</a></li>
-                <li class="nav-item nav-item_second"><a href="#" class="nav-link "><i class="nav-icon"><img src="/img/nav/cards.png"
+                <li class="nav__item"><a href="#" class="nav__link "><i class="nav__icon"><img src="/img/nav/club.png" alt="">
+                        </i> Наш клуб</a></li>
+                <li class="nav__item"><a href="#" class="nav__link "><i class="nav__icon"><img src="/img/nav/cards.png"
                                 alt=""></i>Клубные карты</a></li>
-                <li class="nav-item nav-item_third"><a href="#" class="nav-link "><i class="nav-icon"><img src="/img/nav/life.png"
+                <li class="nav__item"><a href="#" class="nav__link "><i class="nav__icon"><img src="/img/nav/life.png"
                                 alt=""></i>Максима Life</a></li>
-                <li class="nav-item nav-item_forth"><a href="#" class="nav-link "><i class="nav-icon"><img src="/img/nav/team.png"
+                <li class="nav__item"><a href="#" class="nav__link "><i class="nav__icon"><img src="/img/nav/team.png"
                                 alt=""></i>Команда</a></li>
-                <li class="nav-item nav-item_fifth"><a href="#" class="nav-link "><i class="nav-icon"><img src="/img/nav/contacts.png"
+                <li class="nav__item"><a href="#" class="nav__link "><i class="nav__icon"><img src="/img/nav/contacts.png"
                                 alt=""></i>Контакты</a></li>
-                <li class="nav-item nav-item_fifth"><a href="#" class="nav-link "><i class="nav-icon"><img src="/img/nav/contacts.png"
-                                alt=""></i>Контакты</a></li>
-                <li class="nav-item nav-item_fifth"><a href="#" class="nav-link "><i class="nav-icon"><img src="/img/nav/contacts.png"
-                                alt=""></i>Контакты</a></li>
+
             </nav>
         </div>
     </div>
@@ -108,46 +105,46 @@
     </section>
 
     <div class="wrapper">
-        <div class="calculator__title">Взвесьте себя и узнайте, что делать</div>
-        <div class="calculator__description">Узнайте, каким должен быть ваш вес, учитывая рост, возраст и род занятий.</div>
+        <div class="calculator-title">Взвесьте себя и узнайте, что делать</div>
+        <div class="calculator-description">Узнайте, каким должен быть ваш вес, учитывая рост, возраст и род занятий.</div>
         <form action="" class="form">
+            <div class="form-parameters">
+                <div class="weight">
+                    <div class="weight__title">Вес:</div>
+                    <input type="text" name="" id="" class="weight__number" placeholder="85 кг" value="">
+                </div>
+                <div class="age">
+                    <div class="age__title">Возраст:</div>
+                    <input type="text" name="" id="" class="age__number" placeholder="30 лет" value="">
+                </div>
+                <div class="height">
+                    <div class="height__title">Рост:</div>
+                    <input type="text" name="" id="" class="height__number" placeholder="186 см" value="">
+                </div>
+            </div>
             <div class="form-section">
                 <div class="form-titles">
-                    <div class="form-title">Вес:</div>
-                    <div class="form-title">Кто вы?</div>
-                    <div class="form-title">Телосложение</div>
+                    <div class="form-titles__item">Кто вы?</div>
+                    <div class="form-titles__item">Телосложение</div>
                 </div>
-                <div class="form-buttons">
-                    <div class="form-parameters">
-                        <div class="weight">
-                            <input type="text" name="" id="" class="weight-number" placeholder="85 кг" value="">
-                        </div>
-                        <div class="age">
-                            <div class="age-title">Возраст:</div>
-                            <input type="text" name="" id="" class="age-number" placeholder="30 лет" value="">
-                        </div>
-                        <div class="height">
-                            <div class="height-title">Рост:</div>
-                            <input type="text" name="" id="" class="height-number" placeholder="186 см" value="">
-                        </div>
+                <div class="buttons-form">
+                    <div class="form-buttons-sex ">
+                        <input type="radio" checked name="sex" class="form-buttons-sex__radio" value="man" id="man">
+                        <label class="form-buttons-sex__label" for="man">Мужчина</label>
+                        <input type="radio" name="sex" value="woman" class="form-buttons-sex__radio" id="woman">
+                        <label class="form-buttons-sex__label" for="woman">Женщина</label>
                     </div>
-                    <div class="sex-buttons">
-                        <input type="radio" checked name="sex" class="form-radio" value="man" id="man">
-                        <label class="form-label" for="man">Мужчина</label>
-                        <input type="radio" name="sex" value="woman" class="form-radio" id="woman">
-                        <label class="form-label" for="woman">Женщина</label>
-                    </div>
-                    <div class="figure-buttons">
-                        <input type="radio" checked name="figure" class="form-radio" value="normal" id="normal">
-                        <label class="form-label" for="normal">Нормальное</label>
-                        <input type="radio"  name="figure" class="form-radio" value="normal" id="full">
-                        <label class="form-label" for="full">Полное</label>
-                        <input type="radio"  name="figure" class="form-radio" value="normal" id="fragile">
-                        <label class="form-label" for="fragile">Хрупкое</label>
+                    <div class="form-buttons-figure ">
+                        <input type="radio" checked name="figure" class="form-buttons-figure__radio" value="normal" id="normal">
+                        <label class="form-buttons-figure__label" for="normal">Нормальное</label>
+                        <input type="radio" name="figure" class="form-buttons-figure__radio" value="full" id="full">
+                        <label class="form-buttons-figure__label" for="full">Полное</label>
+                        <input type="radio" name="figure" class="form-buttons-figure__radio" value="fragile" id="fragile">
+                        <label class="form-buttons-figure__label" for="fragile">Хрупкое</label>
                     </div>
                 </div>
             </div>
-            <button class="main-button">Расчитать</button>
+            <button class="form-main-button">Расчитать</button>
         </form>
     </div>
     <div class="walk">
@@ -164,17 +161,15 @@
     <footer class="footer">
         <div class="wrapper">
             <div class="footer-body">
-                <div class="footer__contact">
-                    <div class="footer__title">Далеко-далеко за словесными горами в стране, гласных и согласных живут
-                        рыбные тексты. Пояс всемогущая рыбного напоивший прямо рукопись выйти, толку рекламных своих,
-                        ты там предупреждал жизни имени дороге бросил переулка, то злых.</div>
-                    <div class="footer__address">Барнаул, ул. Лазурная, 7
+                <div class="footer-contact">
+                    <div class="footer-contact__title">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Пояс всемогущая рыбного напоивший прямо рукопись выйти, толку рекламных своих, ты там предупреждал жизни имени дороге бросил переулка, то злых.</div>
+                    <div class="footer-contact__address">Барнаул, ул. Лазурная, 7
                     </div>
-                    <div class="footer__sales-department">Отдел продаж: <span>28-30-28</span></div>
-                    <div class="footer__reception-desk"> Рецепция: <span>28-30-28</span></div>
+                    <div class="footer-contact__sales-department">Отдел продаж: <span>28-30-28</span></div>
+                    <div class="footer-contact__reception-desk"> Рецепция: <span>28-30-28</span></div>
                 </div>
-                <div class="footer__opening-hours">
-                    <div class="footer__title">Режим работы</div>
+                <div class="footer-opening-hours">
+                    <div class="footer-opening-hours__title">Режим работы</div>
                     <div class="opening-hours">
                         <div>
                             Пн-Пт: <b>7:00 - 23:00</b>
@@ -183,18 +178,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="footer__last-part">
-                    <ul class="footer__social">
-                        <li class="social__item"><a href="#" class="social__item_link"><i class="social__item_icon"><img
+                <div class="footer-last-part">
+                    <ul class="footer-social">
+                        <li class="footer-social__item item-vk"><a href="#" class="footer-social__item_link"><i class="footer-social__item_icon"><img
                                         src="/img/footer/vk.png" alt=""></i></a></li>
-                        <li class="social__item"><a href="#" class="social__item_link"><i class="social__item_icon"><img
+                        <li class="footer-social__item item-fb"><a href="#" class="footer-social__item_link"><i class="footer-social__item_icon"><img
                                         src="/img/footer/fb.png" alt=""></i></a></li>
-                        <li class="social__item"><a href="#" class="social__item_link"><i class="social__item_icon"><img
+                        <li class="footer-social__item item-ok"><a href="#" class="footer-social__item_link"><i class="footer-social__item_icon"><img
                                         src="/img/footer/ok.png" alt=""></i></a></li>
-                        <li class="social__item"><a href="#" class="social__item_link"><i class="social__item_icon"><img
+                        <li class="footer-social__item item-youtube"><a href="#" class="footer-social__item_link"><i class="footer-social__item_icon"><img
                                         src="/img/footer/youtube.png" alt=""></i></a></li>
                     </ul>
-                    <div class="footer__rules">
+                    <div class="footer-rules">
                         <a href="#" class="footer-rules-link">Правила клуба</a> (публичная оферта)
                     </div>
                 </div>

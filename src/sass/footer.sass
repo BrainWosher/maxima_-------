@@ -13,47 +13,63 @@
     padding-bottom: 56px
     &-body 
         @include flex-start-between
-    &__contact 
+    &-contact 
         position: relative
         flex-basis: 33%
         &::before 
             position: absolute
             right: 100%
             content: '\00a9'
-            font-family: "OpenSans Regular"            
-    &__social 
+            font-family: "OpenSans Regular"  
+        &__title 
+            font-size: 18px
+            font-family: "Intro Regular"
+            line-height: 1.111        
+            padding-bottom: 19px    
+        &__address 
+            font-size: 13px
+            font-family: "OpenSans Regular"
+            line-height: 1.9 
+        &__sales-department 
+            font-size: 13px
+            font-family: "OpenSans Regular"
+            line-height: 1.9 
+            span 
+                font-family: "OpenSans Bold"
+        &__reception-desk
+            font-size: 13px
+            font-family: "OpenSans Regular"
+            line-height: 1.9       
+            span 
+                font-family: "OpenSans Bold"      
+    &-social 
         @include flex-center-between
         align-self: flex-end
         margin: 0
         padding: 0
-    &__title 
-        font-size: 18px
-        font-family: "Intro Regular"
-        line-height: 1.111        
-        padding-bottom: 19px
-    &__address 
-        font-size: 13px
-        font-family: "OpenSans Regular"
-        line-height: 1.9 
-    &__sales-department 
-        font-size: 13px
-        font-family: "OpenSans Regular"
-        line-height: 1.9 
-        span 
-            font-family: "OpenSans Bold"
-    &__reception-desk
-        font-size: 13px
-        font-family: "OpenSans Regular"
-        line-height: 1.9       
-        span 
-            font-family: "OpenSans Bold"
-    &__last-part
+        &__item 
+            list-style: none                
+            &_icon 
+                transition: all .3s
+                display: block
+                z-index: 2
+                position: relative
+                top: 0
+                width: 46px
+                height: 46px
+                margin: auto auto 40px 19px
+                border-radius: 50%
+                border: 2px solid transparent
+                background-color: #e33861
+                line-height: 60px
+                text-align: center
+    &-last-part
         display: flex
         align-items: flex-start
         justify-content: center
         flex-direction: column
         flex-basis: 33%
-    &__rules 
+    &-rules 
         font-family: "OpenSans Regular"
         font-size: 12px
         line-height: 1.667
@@ -66,49 +82,39 @@
             text-decoration: none
             &:hover 
                 text-decoration: underline
-    &__opening-hours 
+    &-opening-hours 
         flex-basis: 33%
         margin-left: 102px
+        &__title 
+            font-size: 18px
+            font-family: "Intro Regular"
+            line-height: 1.111        
+            padding-bottom: 19px   
 .opening-hours 
     font-size: 13px
     font-family: "OpenSans Regular"
     color: rgb(255, 255, 255)
     line-height: 1.9   
     position: absolute
-.social__item 
-    list-style: none
-    &:nth-child(1) .social__item_icon
-        line-height: 50px
-        margin-left: 0
-        &:hover .social__item_icon
-            background: #1bbdce
-            border: 2px solid #fff
-    &:nth-child(2)
-        &:hover .social__item_icon
-            background: #3b5998
-            border: 2px solid #fff
-    &:nth-child(3)
-        &:hover .social__item_icon
-            background-color: #f2720c
-            border: 2px solid #fff
-    &:nth-child(4)
-        &:hover .social__item_icon
-            background-color: #cc181e
-            border: 2px solid #fff
-    &_icon 
-        transition: all .3s
-        display: block
-        z-index: 2
-        position: relative
-        top: 0
-        width: 46px
-        height: 46px
-        margin: auto auto 40px 19px
-        border-radius: 50%
-        border: 2px solid transparent
-        background-color: #e33861
-        line-height: 60px
-        text-align: center
-.social__item:hover .social__item_icon
+
+.item-vk .footer-social__item_icon
+    line-height: 50px
+    margin-left: 0
+    &:hover .footer-social__item_icon
+        background: #1bbdce
+        border: 2px solid #fff
+.item-fb
+    &:hover .footer-social__item_icon
+        background: #3b5998
+        border: 2px solid #fff
+.item-ok
+    &:hover .footer-social__item_icon
+        background-color: #f2720c
+        border: 2px solid #fff
+.item-youtube
+    &:hover .footer-social__item_icon
+        background-color: #cc181e
+        border: 2px solid #fff
+.footer-social__item:hover .footer-social__item_icon
     background: #1bbdce
     border: 2px solid #fff

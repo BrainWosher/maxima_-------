@@ -62,11 +62,11 @@ $(document).ready(function() {
                 .toFixed(2));
         }, 1000);
     };
-    $('.main-button').click(function(e) {
+    $('.form-main-button').click(function(e) {
         e.preventDefault();
-        let weight = $('.weight-number').val();
-        let height = $('.height-number').val();
-        let age = $('.age-number').val();
+        let weight = $('.weight__number').val();
+        let height = $('.height__number').val();
+        let age = $('.age__number').val();
         let res;
         // console.log('Возраст: ' + age, 'Вес' + weight, 'Рост' + height);
 
@@ -74,8 +74,8 @@ $(document).ready(function() {
             let selectedSex = $('input[name=sex]:checked').val();
             let selectedFigure = $('input[name=figure]:checked').val();
             let currentUrl = $(location).attr('href');
-            
-            res = ('Возраст:' + age + ', ' + 'Вес: ' + weight + ', '  + 'Рост:' + height + ', '  + selectedSex + ', '  + selectedFigure);
+
+            res = ('Возраст:' + age + ', ' + 'Вес: ' + weight + ', ' + 'Рост:' + height + ', ' + selectedSex + ', ' + selectedFigure);
             alert('Выбранные параметры: ' + res);
 
 
